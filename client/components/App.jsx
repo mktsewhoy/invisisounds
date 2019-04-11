@@ -1,8 +1,12 @@
 import React from 'react'
 import Tile from './Tile'
+import Button from './Button'
+import {Route} from 'react-router-dom'
 const App = () => {
   return (
-    Array.from({ length: 50000 }, () => <Tile />)
+    <div>
+      <Route />
+    </div>    
 
 
   )
