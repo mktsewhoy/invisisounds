@@ -1,6 +1,7 @@
 import React from 'react'
 import Tile from './Tile'
 import Button from './Button'
+import SoundBoard from './SoundBoard'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
         <div>
           <Route exact={true} path='/' component={Button}/>
-          {/* <Route exact={true} path='/sound' component={SoundBoard}/> */}
+          <Route exact={true} path='/sound' component={SoundBoard}/>
           
         </div>
 
