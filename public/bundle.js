@@ -97,26 +97,23 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Pixel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pixel */ "./client/components/Pixel.jsx");
+/* harmony import */ var _Tile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tile */ "./client/components/Tile.jsx");
 
 
 
 var App = function App() {
-  return Array.from({
-    length: 50000
-  }, function () {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__["default"], null);
-  });
+  // return Array.from({ length:1000}, () => <Pixel />)\
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Invisisounds")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
-/***/ "./client/components/Pixel.jsx":
-/*!*************************************!*\
-  !*** ./client/components/Pixel.jsx ***!
-  \*************************************/
+/***/ "./client/components/Tile.jsx":
+/*!************************************!*\
+  !*** ./client/components/Tile.jsx ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -134,100 +131,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-
-var randomColour = function randomColour() {
-  return "#".concat(Math.floor(Math.random() * 16777215).toString(16));
-};
-
-var width = .5;
-var height = width;
-
-var randomTime = function randomTime() {
-  return "#".concat(Math.floor(Math.random() * 1000));
-}; // const incrementColour = ()=> {             //our attempt at making a colour incrementore
-//   let i = 1
-//   return(Number(i).toString(16))
-// }
-
-
-var Pixel =
+var Tile =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Pixel, _React$Component);
+  _inherits(Tile, _React$Component);
 
-  function Pixel(props) {
+  function Tile(props) {
     var _this;
 
-    _classCallCheck(this, Pixel);
+    _classCallCheck(this, Tile);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Pixel).call(this, props));
-
-    _defineProperty(_assertThisInitialized(_this), "changeColour", function () {
-      var style = {
-        width: width,
-        height: height,
-        backgroundColor: randomColour()
-      };
-
-      _this.setState({
-        style: style
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "colourTimer", function () {
-      var style = {
-        width: width,
-        height: height,
-        backgroundColor: '#000000'
-      };
-
-      _this.setState({
-        style: style
-      });
-    });
-
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Tile).call(this, props));
     _this.state = {
       style: {
-        height: height,
-        width: width,
-        backgroundColor: randomColour()
+        height: '500px',
+        width: '500px',
+        border: 'solid'
       }
     };
     return _this;
   }
 
-  _createClass(Pixel, [{
+  _createClass(Tile, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
-
+      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        onClick: function onClick() {
-          return _this2.changeColour();
-        },
-        onMouseEnter: function onMouseEnter() {
-          return _this2.changeColour();
-        },
         style: this.state.style
       });
     }
   }]);
 
-  return Pixel;
+  return Tile;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Pixel);
+/* harmony default export */ __webpack_exports__["default"] = (Tile);
 
 /***/ }),
 
