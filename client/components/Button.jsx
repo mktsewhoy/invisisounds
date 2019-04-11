@@ -9,7 +9,7 @@ class Button extends React.Component {
 
               <p>?
                  hi there how are you 
-                 <Link>What's up?</Link>
+                 <Link to='/sound'>What's up?</Link>
             </p>
              
           </div>
