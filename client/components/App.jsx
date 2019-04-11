@@ -6,19 +6,6 @@ const App = () => {
     <div>
        <div>
       <h1>Invisisounds</h1>
-    </div>
-
-    <div>
-
-      
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
 
     </div>
     </div>
