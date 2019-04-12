@@ -1,24 +1,37 @@
 import React from 'react'
 
-class clickThis extends React.Component {
+const width = .5
+const height = width
+
+class Tile extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      //default state of tile
+      hover: false,
+      style: {
+        height: '50px',
+        width: '50px',
+        backgroundColor: '#ff0000'
       }
     }
   }
-
-  clickHandler = evt => {
-    // console.log('clicked into')
+  hoverOn = evt => {
     this.setState({
-        //change to new tile state
+      hover: !this.state.hover,
+      style: {
+        height: '50px',
+        width: '50px',
+        // ? normal red state: hover green state
+        backgroundColor: this.state.hover ? '#ff0000' : '#00ff00'
+      }
+      // also play sound on hover
     })
+    document.getElementById('tileover').play()
   }
-
   render() {
     return (
-      <div style={this.state.placeholder} onMouseEnter={this.clickHandler}></div>
+      <div style={this.state.style} onMouseOver={this.hoverOn} onMouseLeave={this.hoverOn}></div>
     )
   }
 }
+export default Tile
