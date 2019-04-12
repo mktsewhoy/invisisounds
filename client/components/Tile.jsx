@@ -5,8 +5,8 @@ class Tile extends React.Component {
     super(props)
     this.state = {
       style: {
-        height: '500px',
-        width: '500px',
+        height: '400px',
+        width: '400px',
         border: 'solid',
       }
     }
