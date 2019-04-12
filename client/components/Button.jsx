@@ -6,7 +6,7 @@ class Button extends React.Component {
       return (
           <div>
           <p>
-            <Link to='/sound'><button>Start Again</button></Link>
+            <Link to='/sound'><button>Start</button></Link>
           </p>
           </div>
       )

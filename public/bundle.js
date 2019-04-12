@@ -173,7 +173,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/sound"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Start Again"))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Start"))));
     }
   }]);
 
@@ -196,6 +196,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Tile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tile */ "./client/components/Tile.jsx");
+/* harmony import */ var _public_sounds_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/sounds.js */ "./public/sounds.js");
+/* harmony import */ var _public_sounds_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_sounds_js__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -217,6 +219,13 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+function shuffle(array) {
+  return array.sort(function () {
+    return Math.random() - 0.5;
+  });
+}
+
 var SoundBoard =
 /*#__PURE__*/
 function (_React$Component) {
@@ -231,8 +240,12 @@ function (_React$Component) {
   _createClass(SoundBoard, [{
     key: "render",
     value: function render() {
-      console.log(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"]);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      console.log(shuffle(_public_sounds_js__WEBPACK_IMPORTED_MODULE_2___default.a));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, shuffle(_public_sounds_js__WEBPACK_IMPORTED_MODULE_2___default.a).map(function (item, id) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: id
+        }, item.file);
+      }));
     }
   }]);
 
@@ -298,7 +311,6 @@ function (_React$Component) {
   _createClass(Tile, [{
     key: "render",
     value: function render() {
-      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: this.state.style
       });
@@ -29131,6 +29143,95 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/sounds.js":
+/*!**************************!*\
+  !*** ./public/sounds.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [{
+  id: 1,
+  file: "Air Plane Ding-SoundBible.com-496729130.mp3"
+}, {
+  id: 2,
+  file: "Air_Wrench_Short-Lightning_McQue-2139303794.mp3"
+}, {
+  id: 3,
+  file: "Banana Peel Slip-SoundBible.com-580403617.mp3"
+}, {
+  id: 4,
+  file: "Banana Peel Slip Zip-SoundBible.com-803276918.mp3"
+}, {
+  id: 5,
+  file: "bullet_whizzing_by-Mike_Koenig-2005433595.mp3"
+}, {
+  id: 6,
+  file: "car_brake_crash-Cam_Martinez-567114981.mp3"
+}, {
+  id: 7,
+  file: "cartoon-computer_ds.mp3"
+}, {
+  id: 8,
+  file: "cartoon-telephone_daniel_simion.mp3"
+}, {
+  id: 9,
+  file: "dixie-horn_daniel-simion.mp3"
+}, {
+  id: 10,
+  file: "flyby-Conor-1500306612.mp3"
+}, {
+  id: 11,
+  file: "Glass_Break-stephan_schutze-958181291.mp3"
+}, {
+  id: 12,
+  file: "Growling Lion-SoundBible.com-495747737.mp3"
+}, {
+  id: 13,
+  file: "Incoming_Suspense-Maximilien_-1060577487.mp3"
+}, {
+  id: 14,
+  file: "Japanese Temple Bell Small-SoundBible.com-113624364.mp3"
+}, {
+  id: 15,
+  file: "Joke Sting-SoundBible.com-1968971319.mp3"
+}, {
+  id: 16,
+  file: "M4A1_Single-Kibblesbob-8540445.mp3"
+}, {
+  id: 17,
+  file: "Metal Latch-SoundBible.com-736691159.mp3"
+}, {
+  id: 18,
+  file: "Mirror Breaking-SoundBible.com-73239746.mp3"
+}, {
+  id: 19,
+  file: "Mountain Lion-SoundBible.com-68904420.mp3"
+}, {
+  id: 20,
+  file: "Scary Chainsaw-SoundBible.com-1146425849.mp3"
+}, {
+  id: 21,
+  file: "Siren_Noise-KevanGC-1337458893.mp3"
+}, {
+  id: 22,
+  file: "Strange_Static-KP-1708174947.mp3"
+}, {
+  id: 23,
+  file: "street-daniel_simon.mp3"
+}, {
+  id: 24,
+  file: "Tape Deck-SoundBible.com-967485391.mp3"
+}, {
+  id: 25,
+  file: "Traffic_Jam-Yo_Mama-1164700013-3.mp3"
+}, {
+  id: 26,
+  file: "Whip-SoundBible.com-1988767601.mp3"
+}];
 
 /***/ })
 

@@ -15,7 +15,6 @@ class Tile extends React.Component {
 
 
   render() {
-    console.log(this.state)
     return <div style={this.state.style}></div>
     }
 }
