@@ -20,7 +20,7 @@ class SoundBoard extends React.Component {
             {shuffle(Sound).map((item, id)=> {
               console.log(item)
               return (
-                <Tile soundID={"s" + item.id} soundFile={'/sounds/' + item.url}/>
+                <Tile soundId={"s" + item.id} soundFile={'/sounds/' + item.url}/>
                 
               )
             })}
