@@ -305,8 +305,7 @@ function (_React$Component) {
     _this.state = {
       style: {
         height: '400px',
-        width: '400px',
-        border: 'solid'
+        width: '400px'
       }
     };
     return _this;
