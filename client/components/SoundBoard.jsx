@@ -1,19 +1,29 @@
 import React from 'react'
+import Sound from '../../public/sounds.js'
 import Tile from './Tile'
 
+function shuffle(myArray) {
+  console.log(myArray)
+  return myArray.sort(() => Math.random() - 0.5);
+}
+
 class SoundBoard extends React.Component {
+  
+   
   render(){
-    console.log(Tile)
-    return (
+    console.log(shuffle(Sound))
+    
+    // return(
+    // <Tile soundId="sou1" soundFile="/sounds/Air Plane Ding-SoundBible.com-496729130.mp3" />)
+        return (
         <div>
-            <Tile soundId='sound1' soundFile='/sounds/Air Plane Ding-SoundBible.com-496729130.mp3' />
-            <Tile  soundId='sound2' soundFile='/sounds/Banana Peel Slip Zip-SoundBible.com-803276918.mp3'/>
-            <Tile  soundId='sound3' soundFile='/sounds/cartoon-computer_ds.mp3'/>
-            <Tile  soundId='sound4' soundFile='/sounds/dixie-horn_daniel-simion.mp3'/>
-            <Tile  soundId='sound5' soundFile='/sounds/Japanese Temple Bell Small-SoundBible.com-113624364.mp3'/>
-            <Tile  soundId='sound6' soundFile='/sounds/Strange_Static-KP-1708174947.mp3'/>
-            <Tile  soundId='sound7' soundFile='/sounds/Tape Deck-SoundBible.com-967485391.mp3'/>
-            <Tile  soundId='sound8' soundFile='sounds/Joke Sting-SoundBible.com-1968971319.mp3'/>
+            {shuffle(Sound).map((item, id)=> {
+              console.log(item)
+              return (
+                <Tile soundId={"s" + item.id} soundFile={'/sounds/' + item.url}/>
+                
+              )
+            })}
     
         </div>
     )

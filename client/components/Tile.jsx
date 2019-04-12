@@ -8,7 +8,7 @@ class Tile extends React.Component {
       style: {
         height: '400px',
         width: '400px',
-        border: 'solid',
+        
       }
     }
   }

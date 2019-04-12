@@ -1,4 +1,4 @@
-const sounds = [
+const  sounds = [
   { id: 1, url: "Air Plane Ding-SoundBible.com-496729130.mp3" },
   { id: 2, url: "Air_Wrench_Short-Lightning_McQue-2139303794.mp3" },
   { id: 3, url: "Banana Peel Slip-SoundBible.com-580403617.mp3" },
@@ -26,3 +26,4 @@ const sounds = [
   { id: 25, url: "Traffic_Jam-Yo_Mama-1164700013-3.mp3" },
   { id: 26, url: "Whip-SoundBible.com-1988767601.mp3" }
 ]
+export default sounds

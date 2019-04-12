@@ -195,7 +195,8 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Tile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tile */ "./client/components/Tile.jsx");
+/* harmony import */ var _public_sounds_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../public/sounds.js */ "./public/sounds.js");
+/* harmony import */ var _Tile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tile */ "./client/components/Tile.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -217,6 +218,14 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+function shuffle(myArray) {
+  console.log(myArray);
+  return myArray.sort(function () {
+    return Math.random() - 0.5;
+  });
+}
+
 var SoundBoard =
 /*#__PURE__*/
 function (_React$Component) {
@@ -231,31 +240,15 @@ function (_React$Component) {
   _createClass(SoundBoard, [{
     key: "render",
     value: function render() {
-      console.log(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"]);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound1",
-        soundFile: "/sounds/Air Plane Ding-SoundBible.com-496729130.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound2",
-        soundFile: "/sounds/Banana Peel Slip Zip-SoundBible.com-803276918.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound3",
-        soundFile: "/sounds/cartoon-computer_ds.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound4",
-        soundFile: "/sounds/dixie-horn_daniel-simion.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound5",
-        soundFile: "/sounds/Japanese Temple Bell Small-SoundBible.com-113624364.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound6",
-        soundFile: "/sounds/Strange_Static-KP-1708174947.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound7",
-        soundFile: "/sounds/Tape Deck-SoundBible.com-967485391.mp3"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        soundId: "sound8",
-        soundFile: "sounds/Joke Sting-SoundBible.com-1968971319.mp3"
+      console.log(shuffle(_public_sounds_js__WEBPACK_IMPORTED_MODULE_1__["default"])); // return(
+      // <Tile soundId="sou1" soundFile="/sounds/Air Plane Ding-SoundBible.com-496729130.mp3" />)
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, shuffle(_public_sounds_js__WEBPACK_IMPORTED_MODULE_1__["default"]).map(function (item, id) {
+        console.log(item);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tile__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          soundId: "s" + item.id,
+          soundFile: '/sounds/' + item.url
+        });
       }));
     }
   }]);
@@ -312,8 +305,7 @@ function (_React$Component) {
     _this.state = {
       style: {
         height: '400px',
-        width: '400px',
-        border: 'solid'
+        width: '400px'
       }
     };
     return _this;
@@ -29693,6 +29685,98 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/sounds.js":
+/*!**************************!*\
+  !*** ./public/sounds.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var sounds = [{
+  id: 1,
+  url: "Air Plane Ding-SoundBible.com-496729130.mp3"
+}, {
+  id: 2,
+  url: "Air_Wrench_Short-Lightning_McQue-2139303794.mp3"
+}, {
+  id: 3,
+  url: "Banana Peel Slip-SoundBible.com-580403617.mp3"
+}, {
+  id: 4,
+  url: "Banana Peel Slip Zip-SoundBible.com-803276918.mp3"
+}, {
+  id: 5,
+  url: "bullet_whizzing_by-Mike_Koenig-2005433595.mp3"
+}, {
+  id: 6,
+  url: "car_brake_crash-Cam_Martinez-567114981.mp3"
+}, {
+  id: 7,
+  url: "cartoon-computer_ds.mp3"
+}, {
+  id: 8,
+  url: "cartoon-telephone_daniel_simion.mp3"
+}, {
+  id: 9,
+  url: "dixie-horn_daniel-simion.mp3"
+}, {
+  id: 10,
+  url: "flyby-Conor-1500306612.mp3"
+}, {
+  id: 11,
+  url: "Glass_Break-stephan_schutze-958181291.mp3"
+}, {
+  id: 12,
+  url: "Growling Lion-SoundBible.com-495747737.mp3"
+}, {
+  id: 13,
+  url: "Incoming_Suspense-Maximilien_-1060577487.mp3"
+}, {
+  id: 14,
+  url: "Japanese Temple Bell Small-SoundBible.com-113624364.mp3"
+}, {
+  id: 15,
+  url: "Joke Sting-SoundBible.com-1968971319.mp3"
+}, {
+  id: 16,
+  url: "M4A1_Single-Kibblesbob-8540445.mp3"
+}, {
+  id: 17,
+  url: "Metal Latch-SoundBible.com-736691159.mp3"
+}, {
+  id: 18,
+  url: "Mirror Breaking-SoundBible.com-73239746.mp3"
+}, {
+  id: 19,
+  url: "Mountain Lion-SoundBible.com-68904420.mp3"
+}, {
+  id: 20,
+  url: "Scary Chainsaw-SoundBible.com-1146425849.mp3"
+}, {
+  id: 21,
+  url: "Siren_Noise-KevanGC-1337458893.mp3"
+}, {
+  id: 22,
+  url: "Strange_Static-KP-1708174947.mp3"
+}, {
+  id: 23,
+  url: "street-daniel_simon.mp3"
+}, {
+  id: 24,
+  url: "Tape Deck-SoundBible.com-967485391.mp3"
+}, {
+  id: 25,
+  url: "Traffic_Jam-Yo_Mama-1164700013-3.mp3"
+}, {
+  id: 26,
+  url: "Whip-SoundBible.com-1988767601.mp3"
+}];
+/* harmony default export */ __webpack_exports__["default"] = (sounds);
 
 /***/ })
 
