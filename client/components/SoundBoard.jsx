@@ -14,7 +14,6 @@ class SoundBoard extends React.Component {
             <Tile />
             <Tile />
             <Tile />
-            <Tile />
     
         </div>
     )
