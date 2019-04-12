@@ -16,8 +16,8 @@ class SoundBoard extends React.Component {
         <div>
             {shuffle(Sound).map((item, id)=> {
               return (
-                
-                <div key={id}>{item.file}</div>
+                <Tile soundID={item.id} soundFile={item.file}/>
+                // <div key={id}>{item.file}</div>
               )
             })}
     
